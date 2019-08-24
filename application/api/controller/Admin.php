@@ -102,14 +102,37 @@ class Admin extends Rest
         }
     }
     private function post(){
-
+    $data=input("post.");
+    $obj=new AdminModel();
+    if(isset($dta["username"])){
+        $r =AdminModel::where("username",$data["username"])->find();
+        if(isset($r)){
+            return json(["msg"=>"该管理员名称已存在","code"=>400]);
+        }
+        $obj->username=$data["username"];
+        $obj->role=2;
+        $obj->last_login_time=date("Y-m-d H:i:s");
+        $obj->hash=md5(time());
+        $obj->password=$this->createPassword("123456",$obj->hash);
+        $r=$obj->save();
+        if($r){
+            return json(["msg"=>"添加成功","code"=>200]);
+        }else{
+            return json(["msg"=>"添加失败","code"=>400]);
+        }
+    }else{
+        return json(["msg"=>"请提交管理员姓名","code"=>200]);
     }
+}
     private function put(){
         $data=input("put.");
         if(isset($data["id"])){
             //通过id得到当前的一条记录（对象）
             $obj=AdminModel::get($data["id"]);
             //过滤非数据表中的字段然后进行更新返回受影响的行数
+            if(isset($data["password"])){
+                $data["password"]=$this->createPassword($data["password"],$obj->hash);
+            }
             $r=$obj->allowField(true)->save($data);
             if($r){
                 return json(["msg"=>"修改成功","code"=>200]);
