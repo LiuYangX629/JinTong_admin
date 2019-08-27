@@ -5,6 +5,7 @@ namespace app\api\controller;
 
 
 use app\model\AdminModel;
+use app\model\RoleModel;
 use think\captcha\Captcha;
 use think\controller\Rest;
 
@@ -41,7 +42,8 @@ class Admin extends Rest
         if (isset($r)){
             $pass=$this->createPassword($password,$r->hash);
             if ($pass===$r->password){
-                return json(["msg"=>"登录成功","code"=>200]);
+                $route=RoleModel::where("role",$r->role)->find()->route;
+                return json(["msg"=>"登录成功","code"=>200,"route"=>$route]);
             }
             return json(["msg"=>"登录失败","code"=>400]);
         }else{
