@@ -85,7 +85,7 @@ class Admin extends Rest
         $where=[];
         //添加过滤条件
         if(isset($data["role"])){
-            $where["role"]=$data["role"];
+            $where["role"]=["<>",1];
         }
         if(isset($data["search"])&&$data["search"]!==""){
             $search=$data["search"];
@@ -106,16 +106,19 @@ class Admin extends Rest
     private function post(){
     $data=input("post.");
     $obj=new AdminModel();
-    if(isset($dta["username"])){
+    if(isset($data["username"])){
         $r =AdminModel::where("username",$data["username"])->find();
         if(isset($r)){
             return json(["msg"=>"该管理员名称已存在","code"=>400]);
         }
         $obj->username=$data["username"];
-        $obj->role=2;
+        $obj->role=$data["role"];
         $obj->last_login_time=date("Y-m-d H:i:s");
         $obj->hash=md5(time());
         $obj->password=$this->createPassword("123456",$obj->hash);
+        if(isset($data["shopid"])){
+            $obj->shopid=$data["shopid"];
+        }
         $r=$obj->save();
         if($r){
             return json(["msg"=>"添加成功","code"=>200]);
