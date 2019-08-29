@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0af9dc"],{"0ea2":function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[e._v("订单管理")])},u=[],c={name:"OrderManage",data:function(){return{}},methods:{},mounted:function(){}},r=c,d=t("2877"),o=Object(d["a"])(r,a,u,!1,null,"6de2e22f",null);n["default"]=o.exports}}]);
+//# sourceMappingURL=chunk-2d0af9dc.c4cc4e68.js.map

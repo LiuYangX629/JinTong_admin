@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0cba4c"],{"4b19":function(n,e,t){"use strict";t.r(e);var c=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[n._v("评论管理")])},a=[],u={name:"CommentManage",data:function(){return{}},methods:{},mounted:function(){}},o=u,r=t("2877"),i=Object(r["a"])(o,c,a,!1,null,"c6b3ce54",null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0cba4c.f441bff0.js.map

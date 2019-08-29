@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e5b94"],{9667:function(e,n,t){"use strict";t.r(n);var u=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("router-view")},r=[],o={name:"Water",data:function(){return{}},methods:{},mounted:function(){}},a=o,c=t("2877"),i=Object(c["a"])(a,u,r,!1,null,"2d71f653",null);n["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0e5b94.9fd6bb3c.js.map

@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d20f745"],{b463:function(n,e,t){"use strict";t.r(e);var a=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[n._v("销售统计")])},u=[],c={name:"SaleManage",data:function(){return{}},methods:{},mounted:function(){}},o=c,r=t("2877"),i=Object(r["a"])(o,a,u,!1,null,"730f8bc0",null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d20f745.d2033d7e.js.map

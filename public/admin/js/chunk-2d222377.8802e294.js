@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d222377"],{ce54:function(n,e,t){"use strict";t.r(e);var u=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[n._v("商家数据")])},a=[],c={name:"ShopData",data:function(){return{}},methods:{},mounted:function(){}},o=c,r=t("2877"),i=Object(r["a"])(o,u,a,!1,null,"e0ef32b8",null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d222377.8802e294.js.map

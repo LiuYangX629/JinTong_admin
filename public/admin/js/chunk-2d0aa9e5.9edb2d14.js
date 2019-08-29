@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0aa9e5"],{"127e":function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[e._v("会员管理")])},u=[],c={name:"MemberManage",data:function(){return{}},methods:{},mounted:function(){}},o=c,r=t("2877"),d=Object(r["a"])(o,a,u,!1,null,"93ea4bdc",null);n["default"]=d.exports}}]);
+//# sourceMappingURL=chunk-2d0aa9e5.9edb2d14.js.map
