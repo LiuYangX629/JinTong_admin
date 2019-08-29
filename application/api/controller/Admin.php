@@ -43,9 +43,12 @@ class Admin extends Rest
             $pass=$this->createPassword($password,$r->hash);
             if ($pass===$r->password){
                 $route=RoleModel::where("role",$r->role)->find()->route;
-                return json(["msg"=>"登录成功","code"=>200,"route"=>$route]);
+                $r->save(["last_login_time"=>date("Y-m-d H:i:s")]);
+                $shopid=$r->shopid;
+                return json(["msg"=>"登录成功","code"=>200,"route"=>$route,"shopid"=>$shopid]);
+            }else {
+                return json(["msg" => "登录失败", "code" => 400]);
             }
-            return json(["msg"=>"登录失败","code"=>400]);
         }else{
             return json(["msg"=>"登录失败","code"=>400]);
         }

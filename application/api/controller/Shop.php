@@ -45,6 +45,10 @@ class Shop extends Rest
             $result=ShopModel::where($where)->select();
             return json(["msg"=>"获取成功","code"=>200,"data"=>$result]);
         }
+        if(isset($data["id"])){
+            $result=ShopModel::get($data["id"]);
+            return json(["msg"=>"获取成功","code"=>200,"data"=>$result]);
+        }
     }
     private function post(){
         $data=input("post.");
